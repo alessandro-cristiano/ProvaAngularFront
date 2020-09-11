@@ -1,0 +1,28 @@
+<html>
+<body>
+<table border="1">
+  <thead></thead>
+  <tr>
+    <th>Codice</th>
+    <th>User</th>
+    <th>Password</th>
+    <th>Nome</th>
+    <th>Cognome</th>
+
+    </tr>
+  
+  <tbody>
+      <tr *ngFor="let user of users">
+          <td>{{user.codice}}</td>
+          <td>{{user.user}}</td>
+          <td>{{user.password}}</td>
+          <td>{{user.nome}}</td>
+          <td>{{user.cognome}}</td>
+          </tr>
+  </tbody>
+    </table>
+<br>
+  <button [routerLink]="''"> Home</button>
+
+  </body>
+  </html>
