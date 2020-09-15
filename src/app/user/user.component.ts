@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClientService } from '../service/http-client.service';
+import { HttpClientService,User } from '../service/http-client.service';
 
 @Component({
   selector: 'app-user',
@@ -21,5 +21,12 @@ export class UserComponent implements OnInit {
 handleSuccessfulResponse(response)
 {
     this.users=response;
+}
+
+deleteUser(user: User): void {
+  this.httpClientService.deleteUser(user)
+    .subscribe( data => {
+      this.users = this.users.filter(u => u !== user);
+    })
 }
 }

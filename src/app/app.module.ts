@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddUserComponent } from './add-user/add-user.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,12 +15,14 @@ import { HttpClientModule } from '@angular/common/http';
     
     AppComponent,
     UserComponent,
-    HomeComponent
+    HomeComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,11 +18,13 @@
           <td>{{user.password}}</td>
           <td>{{user.nome}}</td>
           <td>{{user.cognome}}</td>
+          <td><button class="btn btn-danger" (click)="deleteUser(user)"> Cancella Utente</button></td>
           </tr>
   </tbody>
     </table>
+    
 <br>
-<button routerLink=""> Home</button>
+<button routerLink="">Home</button>
 
   </body>
   <router-outlet></router-outlet>

@@ -1,18 +1,17 @@
 
-body {
+body,footer
+{
+      margin:0;
+      height:100%;
+      width: 100%;
 
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-   
-    
     background: #8fb1d6;
     background: -webkit-linear-gradient(45deg, #0763b0, #8fb1d6);
     background: -o-linear-gradient(45deg, #0763b0, #8fb1d6);
     background: -moz-linear-gradient(45deg, #0763b0, #8fb1d6);
-    background: linear-gradient(45deg, #0763b0, #8fb1d6);
-}
+    background: linear-gradient(45deg, #0763b0, #8fb1d6)
+    }
+
 
 h1{
  
@@ -26,7 +25,7 @@ button {
      background-color: #7892c2;
       border-radius: 20px; 
       border: 1px solid #4e6096; 
-     display: inline-block;
+      display: inline-block;
       cursor: pointer; 
       color: #ffffff;
        font-family: Arial;
