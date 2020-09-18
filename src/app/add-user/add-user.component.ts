@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClientService, User } from '../service/http-client.service';
-
+import { HttpClientService } from '../service/http-client.service';
+import {User} from '../user';
 @Component({
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
@@ -8,7 +8,7 @@ import { HttpClientService, User } from '../service/http-client.service';
 })
 export class AddUserComponent implements OnInit {
 
-  user: User = new User(null,"","","","");
+  user: User = new User;
 
   constructor(
     private httpClientService: HttpClientService

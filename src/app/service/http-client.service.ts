@@ -1,16 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-export class User{
-  constructor(
-    public codice:number,
-    public user:string,
-    public password:string,
-    public nome:string,
-    public cognome:string,
-  ) {}
-}
-
+import { Observable } from 'rxjs';
+import {User} from '../user';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,12 +17,22 @@ export class HttpClientService {
       return this.httpClient.get<User[]>('http://localhost:8087/lista');
     }
 
-    public deleteUser(user) {
-      return this.httpClient.delete<User>("http://localhost:8087/lista"+"/"+ user.codice);
+     deleteUser(codice: number): Observable<Object>{
+      return this.httpClient.delete("http://localhost:8087/lista"+"/"+codice);
     }
   
-    public createUser(user) {
+     createUser(user) {
       return this.httpClient.post<User>("http://localhost:8087/addUser", user);
     }
+
+     updateUser(codice: number, user: User): Observable<Object> {
+      return this.httpClient.put(`http://localhost:8087/lista/${codice}`, user);
+    }
+
+    getUserById(codice: number): Observable<User>{
+      return this.httpClient.get<User>("http://localhost:8087/lista"+"/"+codice);
+    }
+
+   
 
 }

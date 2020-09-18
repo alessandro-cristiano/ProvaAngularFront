@@ -1,0 +1,28 @@
+<h2> User List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Codice</th>
+            <th> User </th>
+            <th> Password</th>
+            <th> Nome</th>
+            <th> Cognome</th>
+            <th> Azioni </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users" >
+            <td> {{ user.codice }} </td>
+            <td> {{ user.user }} </td>
+            <td> {{ user.password }} </td>
+            <td> {{ user.nome }} </td>
+            <td> {{ user.cognome }} </td>
+            <td>
+                <button class="btn btn-danger" (click) = "updateUser(user.codice)" class = "btn btn-info"> Aggiorna</button>
+                <button class="btn btn-danger"(click) = "deleteUser(user.codice)" class = "btn btn-danger" > Cancella</button>
+              
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button routerLink="">Home</button>
